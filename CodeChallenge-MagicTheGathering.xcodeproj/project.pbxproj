@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2840BDE4950218B8FAF870F0 /* Pods_CodeChallenge_MagicTheGathering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939457863D1EEBAF1F42CFCA /* Pods_CodeChallenge_MagicTheGathering.framework */; };
 		A4050DD01E427ED50049A54B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DCF1E427ED50049A54B /* AppDelegate.swift */; };
 		A4050DD21E427ED50049A54B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DD11E427ED50049A54B /* ViewController.swift */; };
 		A4050DD51E427ED50049A54B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4050DD31E427ED50049A54B /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B8894FD600CC37B5EFD6A41 /* Pods-CodeChallenge-MagicTheGathering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-MagicTheGathering.release.xcconfig"; path = "Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering.release.xcconfig"; sourceTree = "<group>"; };
+		939457863D1EEBAF1F42CFCA /* Pods_CodeChallenge_MagicTheGathering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeChallenge_MagicTheGathering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4050DCC1E427ED50049A54B /* CodeChallenge-MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeChallenge-MagicTheGathering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4050DCF1E427ED50049A54B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4050DD11E427ED50049A54B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		A4050DD91E427ED50049A54B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4050DDC1E427ED50049A54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4050DDE1E427ED50049A54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B590F9B0525A870B9088EBEA /* Pods-CodeChallenge-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2840BDE4950218B8FAF870F0 /* Pods_CodeChallenge_MagicTheGathering.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				A4050DCE1E427ED50049A54B /* CodeChallenge-MagicTheGathering */,
 				A4050DCD1E427ED50049A54B /* Products */,
+				D8914EE3BA3B14F39C518CB3 /* Pods */,
+				C82F0A0FA3ADDF688D15D1D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "CodeChallenge-MagicTheGathering";
 			sourceTree = "<group>";
 		};
+		C82F0A0FA3ADDF688D15D1D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				939457863D1EEBAF1F42CFCA /* Pods_CodeChallenge_MagicTheGathering.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8914EE3BA3B14F39C518CB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B590F9B0525A870B9088EBEA /* Pods-CodeChallenge-MagicTheGathering.debug.xcconfig */,
+				7B8894FD600CC37B5EFD6A41 /* Pods-CodeChallenge-MagicTheGathering.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4050DE11E427ED50049A54B /* Build configuration list for PBXNativeTarget "CodeChallenge-MagicTheGathering" */;
 			buildPhases = (
+				8283291E392CD66DCCBF523A /* [CP] Check Pods Manifest.lock */,
 				A4050DC81E427ED20049A54B /* Sources */,
 				A4050DC91E427ED20049A54B /* Frameworks */,
 				A4050DCA1E427ED20049A54B /* Resources */,
+				0FBB0A07F29A1818861E624B /* [CP] Embed Pods Frameworks */,
+				BEC104C052389263CFA54517 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +160,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0FBB0A07F29A1818861E624B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8283291E392CD66DCCBF523A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEC104C052389263CFA54517 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4050DC81E427ED20049A54B /* Sources */ = {
@@ -260,6 +335,7 @@
 		};
 		A4050DE21E427ED50049A54B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B590F9B0525A870B9088EBEA /* Pods-CodeChallenge-MagicTheGathering.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CodeChallenge-MagicTheGathering/Info.plist";
@@ -272,6 +348,7 @@
 		};
 		A4050DE31E427ED50049A54B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8894FD600CC37B5EFD6A41 /* Pods-CodeChallenge-MagicTheGathering.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CodeChallenge-MagicTheGathering/Info.plist";

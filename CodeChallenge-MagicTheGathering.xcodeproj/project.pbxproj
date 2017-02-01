@@ -15,6 +15,7 @@
 		A4050DDA1E427ED50049A54B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4050DD91E427ED50049A54B /* Assets.xcassets */; };
 		A4050DDD1E427ED50049A54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4050DDB1E427ED50049A54B /* LaunchScreen.storyboard */; };
 		A4050DE51E4290C40049A54B /* MagicCardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */; };
+		A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE61E4293A30049A54B /* MagicAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A4050DDC1E427ED50049A54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4050DDE1E427ED50049A54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicCardsCollectionViewController.swift; sourceTree = "<group>"; };
+		A4050DE61E4293A30049A54B /* MagicAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicAPIClient.swift; sourceTree = "<group>"; };
 		B590F9B0525A870B9088EBEA /* Pods-CodeChallenge-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 			children = (
 				A4050DCF1E427ED50049A54B /* AppDelegate.swift */,
 				A4050DD11E427ED50049A54B /* ViewController.swift */,
+				A4050DE61E4293A30049A54B /* MagicAPIClient.swift */,
 				A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */,
 				A4050DD31E427ED50049A54B /* Main.storyboard */,
 				A4050DD91E427ED50049A54B /* Assets.xcassets */,
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */,
 				A4050DE51E4290C40049A54B /* MagicCardsCollectionViewController.swift in Sources */,
 				A4050DD21E427ED50049A54B /* ViewController.swift in Sources */,
 				A4050DD01E427ED50049A54B /* AppDelegate.swift in Sources */,

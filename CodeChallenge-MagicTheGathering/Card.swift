@@ -17,6 +17,6 @@ struct Card {
     let flavor: String?
     let power: String
     let toughness: String
-    let imageURL: String
+    let imageURL: String //UIImage 
     let rulings: [[String:String]]?
 }

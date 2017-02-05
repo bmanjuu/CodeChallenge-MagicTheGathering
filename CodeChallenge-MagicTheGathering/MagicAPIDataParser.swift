@@ -9,10 +9,16 @@
 import Foundation
 
 struct MagicAPIDataParser {
-    func retrieveAllCardsDataParser(fromJSON: [[String:Any]]) -> [Card] {
+    static func retrieveAllCardsDataParser(fromJSON: NSDictionary) -> [Card] {
         var allCards = [Card]()
         
+        
+        
         return allCards
+    }
+    
+    func downloadCardImage(from url: String) /* -> uiimage */ {
+        
     }
 }
 

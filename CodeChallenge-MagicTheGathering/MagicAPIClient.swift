@@ -16,7 +16,7 @@ struct MagicAPIClient {
     
     enum MagicAPIError: Error { case InvalidJSONDictionaryCast, InvalidDictionaryResponseKey, InvalidDictionaryDocsKey }
     
-    func retrieveAllCardsRequest(completion: cardCompletion) {
+    static func retrieveAllCardsRequest(completion: @escaping cardCompletion) {
         
         let session = URLSession(configuration: .default)
         let getCardsBaseURL = URL(string: "https://api.magicthegathering.io/v1/cards")
@@ -25,6 +25,8 @@ struct MagicAPIClient {
             if let data = data {
                 do {
                     let responseData = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
+                    print(responseData)
+                    completion(MagicAPIDataParser.retrieveAllCardsDataParser(fromJSON: responseData), nil)
                 } catch {
                     print(MagicAPIError.InvalidDictionaryResponseKey)
                 }

@@ -9,17 +9,21 @@
 import Foundation
 
 struct MagicAPIClient {
-
-    // var searchRequestURL = getCardsBaseURL + user query paramters
     
     typealias cardCompletion = ([Card], Error?) -> ()
     
     enum MagicAPIError: Error { case InvalidJSONDictionaryCast, InvalidDictionaryResponse }
     
+    static var pageNumber = 0
+    
     static func retrieveAllCardsRequest(completion: @escaping cardCompletion) {
         
         let session = URLSession(configuration: .default)
-        let getCardsBaseURL = URL(string: "https://api.magicthegathering.io/v1/cards")
+        
+        pageNumber+=1
+        let getCardsBaseURL = URL(string: "https://api.magicthegathering.io/v1/cards?page=\(pageNumber)")
+        print("PAGE NUMBER: \(pageNumber)")
+        
         let dataTask = session.dataTask(with: getCardsBaseURL!, completionHandler: { (data, response, error) in
             
             if let data = data {

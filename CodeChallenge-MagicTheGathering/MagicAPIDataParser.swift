@@ -18,12 +18,10 @@ struct MagicAPIDataParser {
         var allCards = [Card]()
         
         if let allCardInfo = cardInformation["cards"] {
-            // print("extracted card info: \n\n \(allCardInfo)\n")
-            // print("card count: \(allCardInfo.count)")
 
             for card in allCardInfo {
                 
-                //used string interpolation in the following statement to account for string values that were not formatted with quotation marks in the JSON response -- Xcode could not interpret/parse through these values prior to doing this 
+                //used string interpolation in the following statement to account for string values that were not formatted with quotation marks in the JSON response -- Xcode could not interpret/parse through these values prior to doing this
                 guard let
                     name = "\(card["name"])" as? String,
                     let manaCost = "\(card["manaCost"])" as? String,
@@ -40,24 +38,17 @@ struct MagicAPIDataParser {
                 print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL)")
                 print("*******************************\n")
                 allCards.append(newCard)
-                
-                //need to persist this in realm?
             }
-
         }
-
-
-        print(allCards.count)
         
         return allCards
     }
     
-    static func retrieveCardFromSearchDataParser() {
-        
+    func downloadCardImage(from url: String) /* -> uiimage */ {
+        //need to use dispatch async to load image? 
     }
     
-    func downloadCardImage(from url: String) /* -> uiimage */ {
-        
+    static func retrieveCardFromSearchDataParser() {
     }
 }
 

@@ -14,9 +14,24 @@ struct Card {
     let type: String
     let rarity: String //enum?
     let textDescription: String
-    let flavor: String?
     let power: String
     let toughness: String
-    let imageURL: String //UIImage 
-    let rulings: [[String:String]]?
+    let imageURL: String //UIImage
+    // let flavor: String?
+    // let rulings: [[String:String]]?
+    
+    init(name: String, manaCost: String, type: String, rarity: String, textDescription: String, power: String, toughness: String, imageURL: String) {
+        self.name = name
+        self.manaCost = manaCost
+        self.type = type
+        self.rarity = rarity
+        self.textDescription = textDescription
+        self.power = power
+        self.toughness = toughness
+        self.imageURL = imageURL
+    }
+    
+    init(name: String, manaCost: String) {
+        self.init(name: name, manaCost: manaCost, type: "", rarity: "", textDescription: "", power: "", toughness: "", imageURL: "")
+    }
 }

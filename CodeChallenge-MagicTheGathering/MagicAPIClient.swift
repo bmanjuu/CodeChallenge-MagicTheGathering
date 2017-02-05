@@ -14,7 +14,7 @@ struct MagicAPIClient {
     
     typealias cardCompletion = ([Card], Error?) -> ()
     
-    enum MagicAPIError: Error { case InvalidJSONDictionaryCast, InvalidDictionaryResponseKey, InvalidDictionaryDocsKey }
+    enum MagicAPIError: Error { case InvalidJSONDictionaryCast, InvalidDictionaryResponse }
     
     static func retrieveAllCardsRequest(completion: @escaping cardCompletion) {
         
@@ -24,16 +24,23 @@ struct MagicAPIClient {
             
             if let data = data {
                 do {
-                    let responseData = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
-                    print(responseData)
-                    completion(MagicAPIDataParser.retrieveAllCardsDataParser(fromJSON: responseData), nil)
+                    let responseData = try JSONSerialization.jsonObject(with: data, options: []) as! [String:[NSDictionary]]
+                    //print("RESPONSE DATA: \(responseData) \n\n\n\n\n\n")
+                   /* guard let cardInformation = responseData["cards"] as? [[String:Any]]
+                        else { print("could not unwrap card information from API response")
+                            completion([Card](), MagicAPIError.InvalidJSONDictionaryCast); return } */
+                    completion(MagicAPIDataParser.retrieveAllCardsDataParser(from: responseData), nil)
                 } catch {
-                    print(MagicAPIError.InvalidDictionaryResponseKey)
+                    print(MagicAPIError.InvalidDictionaryResponse)
                 }
             }
             
         })
         
         dataTask.resume()
+    }
+    
+    static func retrieveCardFromSearch() {
+        
     }
 }

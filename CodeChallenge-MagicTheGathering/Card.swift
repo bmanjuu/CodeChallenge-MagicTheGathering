@@ -10,12 +10,12 @@ import Foundation
 
 struct Card {
     let name: String
-    let manaCost: String
+    let manaCost: String?
     let type: String
     let rarity: String //enum?
     let textDescription: String
-    let power: String
-    let toughness: String
+    let power: String?
+    let toughness: String?
     let imageURL: String //UIImage
     // let flavor: String?
     // let rulings: [[String:String]]?
@@ -31,7 +31,4 @@ struct Card {
         self.imageURL = imageURL
     }
     
-    init(name: String, manaCost: String) {
-        self.init(name: name, manaCost: manaCost, type: "", rarity: "", textDescription: "", power: "", toughness: "", imageURL: "")
-    }
 }

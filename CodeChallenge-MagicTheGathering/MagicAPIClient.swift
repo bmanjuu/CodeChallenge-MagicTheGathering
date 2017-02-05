@@ -8,10 +8,30 @@
 
 import Foundation
 
-struct MagicAGPIClient {
-    
-    let getCardsBaseURL = "https://api.magicthegathering.io/v1/cards"
+struct MagicAPIClient {
+
     // var searchRequestURL = getCardsBaseURL + user query paramters
     
+    typealias cardCompletion = ([Card], Error?) -> ()
     
+    enum MagicAPIError: Error { case InvalidJSONDictionaryCast, InvalidDictionaryResponseKey, InvalidDictionaryDocsKey }
+    
+    func retrieveAllCardsRequest(completion: cardCompletion) {
+        
+        let session = URLSession(configuration: .default)
+        let getCardsBaseURL = URL(string: "https://api.magicthegathering.io/v1/cards")
+        let dataTask = session.dataTask(with: getCardsBaseURL!, completionHandler: { (data, response, error) in
+            
+            if let data = data {
+                do {
+                    let responseData = try JSONSerialization.jsonObject(with: data, options: []) as! NSDictionary
+                } catch {
+                    print(MagicAPIError.InvalidDictionaryResponseKey)
+                }
+            }
+            
+        })
+        
+        dataTask.resume()
+    }
 }

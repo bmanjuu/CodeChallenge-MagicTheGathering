@@ -16,6 +16,8 @@
 		A4050DDD1E427ED50049A54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4050DDB1E427ED50049A54B /* LaunchScreen.storyboard */; };
 		A4050DE51E4290C40049A54B /* MagicCardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */; };
 		A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE61E4293A30049A54B /* MagicAPIClient.swift */; };
+		A4161D7B1E476F0C007A5B1E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4161D7A1E476F0C007A5B1E /* Card.swift */; };
+		A4161D7D1E477704007A5B1E /* MagicAPIDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		A4050DDE1E427ED50049A54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicCardsCollectionViewController.swift; sourceTree = "<group>"; };
 		A4050DE61E4293A30049A54B /* MagicAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicAPIClient.swift; sourceTree = "<group>"; };
+		A4161D7A1E476F0C007A5B1E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicAPIDataParser.swift; sourceTree = "<group>"; };
 		B590F9B0525A870B9088EBEA /* Pods-CodeChallenge-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,8 @@
 				A4050DCF1E427ED50049A54B /* AppDelegate.swift */,
 				A4050DD11E427ED50049A54B /* ViewController.swift */,
 				A4050DE61E4293A30049A54B /* MagicAPIClient.swift */,
+				A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */,
+				A4161D7A1E476F0C007A5B1E /* Card.swift */,
 				A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */,
 				A4050DD31E427ED50049A54B /* Main.storyboard */,
 				A4050DD91E427ED50049A54B /* Assets.xcassets */,
@@ -221,10 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */,
+				A4161D7B1E476F0C007A5B1E /* Card.swift in Sources */,
 				A4050DE51E4290C40049A54B /* MagicCardsCollectionViewController.swift in Sources */,
 				A4050DD21E427ED50049A54B /* ViewController.swift in Sources */,
 				A4050DD01E427ED50049A54B /* AppDelegate.swift in Sources */,
 				A4050DD81E427ED50049A54B /* CodeChallenge_MagicTheGathering.xcdatamodeld in Sources */,
+				A4161D7D1E477704007A5B1E /* MagicAPIDataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

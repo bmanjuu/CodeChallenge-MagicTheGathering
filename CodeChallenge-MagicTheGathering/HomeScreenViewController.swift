@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeScreenViewController: UIViewController {
 
+    @IBOutlet weak var homeScreenImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        //activity indicator/animation here
     }
 
     override func didReceiveMemoryWarning() {

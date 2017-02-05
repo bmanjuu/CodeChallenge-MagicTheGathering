@@ -9,8 +9,9 @@
 import UIKit
 
 private let reuseIdentifier = "card"
+//will need to access cards stored in Realm 
 
-class MagicCardsCollectionViewController: UICollectionViewController {
+class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

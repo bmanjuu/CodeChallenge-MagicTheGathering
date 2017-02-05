@@ -21,12 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
             print("called api client first time")
         }
-        MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
-            print("called api client second time")
-        }
-        MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
-            print("called api client third time")
-        }
+//        MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
+//            print("called api client second time")
+//        }
+//        MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
+//            print("called api client third time")
+//        }
         
         return true
     }

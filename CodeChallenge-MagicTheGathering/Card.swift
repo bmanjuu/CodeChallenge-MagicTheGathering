@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Card {
     let name: String
@@ -16,7 +17,7 @@ struct Card {
     let textDescription: String
     let power: String
     let toughness: String
-    let imageURL: String //UIImage
+    let imageURL: String
     // let flavor: String?
     // let rulings: [[String:String]]?
     

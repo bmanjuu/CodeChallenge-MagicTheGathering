@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		2840BDE4950218B8FAF870F0 /* Pods_CodeChallenge_MagicTheGathering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939457863D1EEBAF1F42CFCA /* Pods_CodeChallenge_MagicTheGathering.framework */; };
 		A4050DD01E427ED50049A54B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DCF1E427ED50049A54B /* AppDelegate.swift */; };
-		A4050DD21E427ED50049A54B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DD11E427ED50049A54B /* ViewController.swift */; };
+		A4050DD21E427ED50049A54B /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DD11E427ED50049A54B /* HomeScreenViewController.swift */; };
 		A4050DD51E427ED50049A54B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4050DD31E427ED50049A54B /* Main.storyboard */; };
 		A4050DD81E427ED50049A54B /* CodeChallenge_MagicTheGathering.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4050DD61E427ED50049A54B /* CodeChallenge_MagicTheGathering.xcdatamodeld */; };
 		A4050DDA1E427ED50049A54B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4050DD91E427ED50049A54B /* Assets.xcassets */; };
 		A4050DDD1E427ED50049A54B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4050DDB1E427ED50049A54B /* LaunchScreen.storyboard */; };
-		A4050DE51E4290C40049A54B /* MagicCardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */; };
+		A4050DE51E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE41E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift */; };
 		A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE61E4293A30049A54B /* MagicAPIClient.swift */; };
 		A4161D7B1E476F0C007A5B1E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4161D7A1E476F0C007A5B1E /* Card.swift */; };
 		A4161D7D1E477704007A5B1E /* MagicAPIDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */; };
@@ -25,13 +25,13 @@
 		939457863D1EEBAF1F42CFCA /* Pods_CodeChallenge_MagicTheGathering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeChallenge_MagicTheGathering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4050DCC1E427ED50049A54B /* CodeChallenge-MagicTheGathering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CodeChallenge-MagicTheGathering.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4050DCF1E427ED50049A54B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4050DD11E427ED50049A54B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4050DD11E427ED50049A54B /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		A4050DD41E427ED50049A54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4050DD71E427ED50049A54B /* CodeChallenge_MagicTheGathering.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodeChallenge_MagicTheGathering.xcdatamodel; sourceTree = "<group>"; };
 		A4050DD91E427ED50049A54B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4050DDC1E427ED50049A54B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4050DDE1E427ED50049A54B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicCardsCollectionViewController.swift; sourceTree = "<group>"; };
+		A4050DE41E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAllMagicCardsCollectionViewController.swift; sourceTree = "<group>"; };
 		A4050DE61E4293A30049A54B /* MagicAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicAPIClient.swift; sourceTree = "<group>"; };
 		A4161D7A1E476F0C007A5B1E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicAPIDataParser.swift; sourceTree = "<group>"; };
@@ -72,11 +72,11 @@
 			isa = PBXGroup;
 			children = (
 				A4050DCF1E427ED50049A54B /* AppDelegate.swift */,
-				A4050DD11E427ED50049A54B /* ViewController.swift */,
 				A4050DE61E4293A30049A54B /* MagicAPIClient.swift */,
 				A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */,
 				A4161D7A1E476F0C007A5B1E /* Card.swift */,
-				A4050DE41E4290C40049A54B /* MagicCardsCollectionViewController.swift */,
+				A4050DD11E427ED50049A54B /* HomeScreenViewController.swift */,
+				A4050DE41E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift */,
 				A4050DD31E427ED50049A54B /* Main.storyboard */,
 				A4050DD91E427ED50049A54B /* Assets.xcassets */,
 				A4050DDB1E427ED50049A54B /* LaunchScreen.storyboard */,
@@ -228,8 +228,8 @@
 			files = (
 				A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */,
 				A4161D7B1E476F0C007A5B1E /* Card.swift in Sources */,
-				A4050DE51E4290C40049A54B /* MagicCardsCollectionViewController.swift in Sources */,
-				A4050DD21E427ED50049A54B /* ViewController.swift in Sources */,
+				A4050DE51E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift in Sources */,
+				A4050DD21E427ED50049A54B /* HomeScreenViewController.swift in Sources */,
 				A4050DD01E427ED50049A54B /* AppDelegate.swift in Sources */,
 				A4050DD81E427ED50049A54B /* CodeChallenge_MagicTheGathering.xcdatamodeld in Sources */,
 				A4161D7D1E477704007A5B1E /* MagicAPIDataParser.swift in Sources */,

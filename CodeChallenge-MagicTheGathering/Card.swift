@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Card {
+class Card {
     let name: String
     let manaCost: String
     let type: String
@@ -18,10 +18,11 @@ struct Card {
     let power: String
     let toughness: String
     let imageURL: String
+    var image: UIImage
     // let flavor: String?
     // let rulings: [[String:String]]?
     
-    init(name: String, manaCost: String, type: String, rarity: String, textDescription: String, power: String, toughness: String, imageURL: String) {
+    init(name: String, manaCost: String, type: String, rarity: String, textDescription: String, power: String, toughness: String, imageURL: String, image: UIImage) {
         self.name = name
         self.manaCost = manaCost
         self.type = type
@@ -30,6 +31,26 @@ struct Card {
         self.power = power
         self.toughness = toughness
         self.imageURL = imageURL
+        self.image = image
+    }
+    
+    static func getDataFromImageUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+    
+    static func downloadCardImage(from urlString: String) -> UIImage {
+        let url = URL(string: urlString)!
+        var cardImage = UIImage()
+        
+        getDataFromImageUrl(url: url) { (data, response, error) in
+            guard let data = data, error == nil else { return }
+            cardImage = UIImage(data: data)!
+        }
+        
+        return cardImage
     }
     
     //idea for displaying card

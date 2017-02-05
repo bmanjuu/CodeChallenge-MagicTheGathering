@@ -34,17 +34,16 @@ struct MagicAPIDataParser {
                     let imageURL = "\(card["imageUrl"])" as? String else {
                         print(MagicDataParseError.InvalidJSONDictionaryCast); return [Card]()}
                 
-                let newCard = Card(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL)
+                let cardImage = Card.downloadCardImage(from: imageURL)
                 
-                let cardImage = downloadCardImage(from: imageURL)
+                let newCard = Card(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL, image: cardImage)
                 
-                var imageDownloaded = false
-                if cardImage != nil {
-                    imageDownloaded = true
+                if newCard.image != nil {
+                    print("image downloaded for \(newCard.name)")
                 }
-                
+
                 print("\n********** CARD INFO **********")
-                print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL) \nimage downloaded: \(imageDownloaded)")
+                print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL)")
                 print("*******************************\n")
                 allCards.append(newCard)
             }
@@ -52,29 +51,7 @@ struct MagicAPIDataParser {
         
         return allCards
     }
-    
-    static func getDataFromImageUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-            }.resume()
-    }
 
-    static func downloadCardImage(from urlString: String) -> UIImage {
-        let url = URL(string: urlString)!
-        var cardImage = UIImage()
-
-        getDataFromImageUrl(url: url) { (data, response, error) in
-            guard let data = data, error == nil else { return }
-            cardImage = UIImage(data: data)!
-        }
-        
-        while cardImage == nil {
-            print("downloading image")
-        }
-        
-        return cardImage
-    }
     
     static func retrieveCardFromSearchDataParser() {
     }

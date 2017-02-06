@@ -57,8 +57,6 @@ class Card: Object {
     }
     
     static func saveCardImageDataFrom(urlString: String) -> Data {
-        print("called save data for image function for \(urlString)")
-        
         let url = URL(string: urlString)!
         var cardImageData = Data()
         
@@ -78,6 +76,11 @@ class Card: Object {
     }
     
     static func obtainCardImageFrom(cardData: Data) -> UIImage {
+        if cardData.isEmpty {
+            print("waiting for image data to be downloaded")
+        } else {
+            print("card has image data")
+        }
         return UIImage(data: cardData)!
     }
     

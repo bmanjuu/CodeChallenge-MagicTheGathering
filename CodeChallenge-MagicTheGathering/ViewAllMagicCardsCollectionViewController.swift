@@ -68,6 +68,7 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
         cell.backgroundColor = UIColor.cyan
         
         let magicCard = cards[indexPath.row]
+        print("magic card now: \(magicCard.name)")
         let magicCardImage = Card.obtainCardImageFrom(cardData: magicCard.imageData)
         
         print("image downloaded for \(magicCard.name)")

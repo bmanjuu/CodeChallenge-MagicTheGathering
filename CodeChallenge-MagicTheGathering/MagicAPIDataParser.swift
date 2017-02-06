@@ -24,6 +24,7 @@ class MagicAPIDataParser {
             for card in allCardInfo {
                 
                 //used string interpolation in the following statement to account for string values that were not formatted with quotation marks in the JSON response -- Xcode could not interpret/parse through these values prior to doing this
+
                 guard let
                     name = "\(card["name"])" as? String,
                     let manaCost = "\(card["manaCost"])" as? String,
@@ -35,23 +36,7 @@ class MagicAPIDataParser {
                     let imageURL = "\(card["imageUrl"])" as? String else {
                         print(MagicDataParseError.InvalidJSONDictionaryCast); return [Card]()}
                 
-                let cardImage = Card.downloadCardImage(from: imageURL)
-                
-                let newCard = Card()
-                newCard.name = name
-                newCard.manaCost = manaCost
-                newCard.type = type
-                newCard.rarity = rarity
-                newCard.textDescription = textDescription
-                newCard.power = power
-                newCard.toughness = toughness
-                newCard.imageURL = imageURL
-                
-                //let newCard = Cards(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL, image: cardImage)
-                
-//                if newCard.image != nil {
-//                    print("image downloaded for \(newCard.name)")
-//                }
+                let newCard = Card(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL)
 
                 print("\n********** CARD INFO **********")
                 print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL)")
@@ -68,6 +53,12 @@ class MagicAPIDataParser {
     }
     
     static func retrieveCardFromSearchDataParser() {
+    }
+    
+    static func removeOptionalTextFromCardValue(card: Card) -> Card {
+        let modifiedCard = card
+        
+        return modifiedCard
     }
 }
 

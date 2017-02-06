@@ -92,7 +92,7 @@ class Card: Object {
 }
 
 
-//the following does not work b/c the strings being parsed/saved from JSON are optional
+//need to remove duplicate card values before adding them to realm, or else adding the following will result in an RLMException error (duplicate for card named: Forest) 
 
 //override class func primaryKey() -> String? {
 //    return "name"

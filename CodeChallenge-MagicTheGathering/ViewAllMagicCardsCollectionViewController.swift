@@ -21,7 +21,6 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     //modify section inset size
     //when user reaches the bottom there should be a button to load more cards
     //when user clicks on card, it expands to fit the screen, tap again and the card flips over to the back with an overlay that contains textual description of what's on the card
-    //may need to create a custom collection view cell to display card
     //add a search bar on top that filters cards based on name 
     //extra: search using other filters such as mana cost, rarity, and type
 
@@ -63,21 +62,20 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return cards.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
+        
         let magicCard = cards[indexPath.row]
+        let magicCardImage = Card.downloadCardImage(from: magicCard.imageURL)
         
-        //let magicCardImageView = UIImageView(image: Card.downloadCardImage(from: magicCard.imageURL))
-//        Card.downloadCardImage(from: magicCard.imageURL)
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        cell.cardImageView.image = magicCardImage
         cell.backgroundColor = UIColor.cyan
-        cell.contentView.sizeToFit()
+        
+        // cell.contentView.sizeToFit()
     
         return cell
     }

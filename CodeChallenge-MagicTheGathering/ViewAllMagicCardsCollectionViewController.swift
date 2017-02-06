@@ -34,10 +34,6 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,16 +65,13 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
+        cell.backgroundColor = UIColor.cyan
         
         let magicCard = cards[indexPath.row]
-        let magicCardImage = Card.downloadCardImage(from: magicCard.imageURL)
+        let magicCardImage = Card.obtainCardImageFrom(cardData: magicCard.imageData)
         
-        DispatchQueue.main.async {
-            cell.cardImageView.image = magicCardImage
-            cell.backgroundColor = UIColor.cyan
-        }
-        
-        // cell.contentView.sizeToFit()
+        print("image downloaded for \(magicCard.name)")
+        cell.cardImageView.image = magicCardImage
     
         return cell
     }

@@ -20,6 +20,7 @@ class Card: Object {
     dynamic var power: String = ""
     dynamic var toughness: String = ""
     dynamic var imageURL: String = ""
+    dynamic var imageData: Data = Data()
     
     required init() {
         super.init()
@@ -33,7 +34,7 @@ class Card: Object {
         super.init(value: value, schema: schema)
     }
     
-    init(name: String, manaCost: String, type: String, rarity: String, textDescription: String, power: String, toughness: String, imageURL: String) {
+    init(name: String, manaCost: String, type: String, rarity: String, textDescription: String, power: String, toughness: String, imageURL: String, imageData: Data) {
         
         super.init()
         
@@ -45,25 +46,33 @@ class Card: Object {
         self.power = power
         self.toughness = toughness
         self.imageURL = imageURL
+        self.imageData = imageData
     }
     
-    static func getDataFromImageUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+    static func downloadDataFromImageURL(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             completion(data, response, error)
             }.resume()
     }
     
-    static func downloadCardImage(from urlString: String) -> UIImage {
-        let url = URL(string: urlString)!
-        var cardImage = UIImage()
+    static func saveCardImageDataFrom(urlString: String) -> Data {
+        print("called save data for image function for \(urlString)")
         
-        getDataFromImageUrl(url: url) { (data, response, error) in
+        let url = URL(string: urlString)!
+        var cardImageData = Data()
+        
+        downloadDataFromImageURL(url: url) { (data, response, error) in
             guard let data = data, error == nil else { return }
-            cardImage = UIImage(data: data)!
+            cardImageData = data
         }
+        print("data downloaded: \(cardImageData)")
 
-        return cardImage
+        return cardImageData
+    }
+    
+    static func obtainCardImageFrom(cardData: Data) -> UIImage {
+        return UIImage(data: cardData)!
     }
     
     static func removeOptionalTextFrom(cardValue: String) -> String {
@@ -78,17 +87,6 @@ class Card: Object {
         return cardValue.substring(with: textRange)
     }
     
-    static func removeHTTPFromURL(url: String) -> String {
-        var modifiedURL = removeOptionalTextFrom(cardValue: url)
-        
-        if modifiedURL == "N/A" {
-            return "N/A"
-        }
-        
-        let textRange = modifiedURL.index(modifiedURL.startIndex, offsetBy: 7)..<modifiedURL.endIndex //range for "http://"
-        
-        return modifiedURL.substring(with: textRange)
-    }
 }
 
 

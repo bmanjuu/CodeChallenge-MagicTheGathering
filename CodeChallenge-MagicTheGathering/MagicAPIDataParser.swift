@@ -44,11 +44,12 @@ class MagicAPIDataParser {
                     textDescription: Card.removeOptionalTextFrom(cardValue: textDescription),
                     power: Card.removeOptionalTextFrom(cardValue: power),
                     toughness: Card.removeOptionalTextFrom(cardValue: toughness),
-                    imageURL: Card.removeOptionalTextFrom(cardValue: imageURL)
+                    imageURL: Card.removeOptionalTextFrom(cardValue: imageURL),
+                    imageData: Card.saveCardImageDataFrom(urlString: Card.removeOptionalTextFrom(cardValue: imageURL))
                 )
 
                 print("\n********** CARD INFO **********")
-                print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL)")
+                print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL) \nimageData: \(newCard.imageData)")
                 print("*******************************\n")
                 allCards.append(newCard)
             }

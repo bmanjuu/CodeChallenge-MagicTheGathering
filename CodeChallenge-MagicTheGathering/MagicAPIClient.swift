@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct MagicAPIClient {
+class MagicAPIClient {
     
     typealias cardCompletion = ([Card], Error?) -> ()
     

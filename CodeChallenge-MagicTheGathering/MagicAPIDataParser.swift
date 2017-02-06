@@ -10,12 +10,13 @@ import Foundation
 import RealmSwift
 import UIKit
 
-struct MagicAPIDataParser {
+class MagicAPIDataParser {
     
     enum MagicDataParseError: Error { case InvalidJSONDictionaryCast, InvalidDictionaryResponse }
     
     static func retrieveAllCardsDataParser(from cardInformation: [String:[NSDictionary]]) -> [Card] {
         
+        let realm = try! Realm()
         var allCards = [Card]()
         
         if let allCardInfo = cardInformation["cards"] {
@@ -34,9 +35,9 @@ struct MagicAPIDataParser {
                     let imageURL = "\(card["imageUrl"])" as? String else {
                         print(MagicDataParseError.InvalidJSONDictionaryCast); return [Card]()}
                 
-                let cardImage = Card.downloadCardImage(from: imageURL)
+                let cardImage = Cards.downloadCardImage(from: imageURL)
                 
-                let newCard = Card(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL, image: cardImage)
+                let newCard = Cards(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL, image: cardImage)
                 
                 if newCard.image != nil {
                     print("image downloaded for \(newCard.name)")
@@ -47,6 +48,10 @@ struct MagicAPIDataParser {
                 print("*******************************\n")
                 allCards.append(newCard)
             }
+        }
+        
+        try! realm.write {
+            realm.add(allCards)
         }
         
         return allCards

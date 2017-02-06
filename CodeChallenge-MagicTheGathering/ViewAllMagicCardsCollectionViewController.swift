@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import RealmSwift
 
 private let reuseIdentifier = "card"
@@ -72,8 +73,10 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
         let magicCard = cards[indexPath.row]
         let magicCardImage = Card.downloadCardImage(from: magicCard.imageURL)
         
-        cell.cardImageView.image = magicCardImage
-        cell.backgroundColor = UIColor.cyan
+        DispatchQueue.main.async {
+            cell.cardImageView.image = magicCardImage
+            cell.backgroundColor = UIColor.cyan
+        }
         
         // cell.contentView.sizeToFit()
     

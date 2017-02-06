@@ -54,6 +54,8 @@ class Cards {
         return cardImage
     }
 
+    //current issue: when this class inherits from Object (for Realm), I keep getting errors about not having required inits and they keep repeating themselves
+    //however, in the Card class, things seems to be going ok so far
     
 }
 

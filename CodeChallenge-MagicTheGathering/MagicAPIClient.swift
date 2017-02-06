@@ -30,10 +30,7 @@ class MagicAPIClient {
             if let data = data {
                 do {
                     let responseData = try JSONSerialization.jsonObject(with: data, options: []) as! [String:[NSDictionary]]
-                    //print("RESPONSE DATA: \(responseData) \n\n\n\n\n\n")
-                   /* guard let cardInformation = responseData["cards"] as? [[String:Any]]
-                        else { print("could not unwrap card information from API response")
-                            completion([Card](), MagicAPIError.InvalidJSONDictionaryCast); return } */
+                    
                     completion(MagicAPIDataParser.retrieveAllCardsDataParser(from: responseData), nil)
                 } catch {
                     print(MagicAPIError.InvalidDictionaryResponse)

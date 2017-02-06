@@ -34,7 +34,7 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -113,7 +113,7 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
 
 }
 
-extension ViewAllMagicCardsCollectionViewController : UICollectionViewDelegateFlowLayout {
+extension ViewAllMagicCardsCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

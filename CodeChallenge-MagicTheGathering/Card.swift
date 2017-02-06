@@ -76,11 +76,6 @@ class Card: Object {
     }
     
     static func obtainCardImageFrom(cardData: Data) -> UIImage {
-        if cardData.isEmpty {
-            print("waiting for image data to be downloaded")
-        } else {
-            print("card has image data")
-        }
         return UIImage(data: cardData)!
     }
     

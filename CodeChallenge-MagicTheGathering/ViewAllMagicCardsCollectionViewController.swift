@@ -62,13 +62,12 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
         
         let magicCard = cards[indexPath.row]
         
-        let magicCardImageView = UIImageView(image: Card.downloadCardImage(from: magicCard.imageURL))
+        //let magicCardImageView = UIImageView(image: Card.downloadCardImage(from: magicCard.imageURL))
+//        Card.downloadCardImage(from: magicCard.imageURL)
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-//        cell.contentView.addSubview(magic)
         cell.contentView.sizeToFit()
-        cell.backgroundColor = UIColor.cyan
     
         return cell
     }

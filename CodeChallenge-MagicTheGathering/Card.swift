@@ -85,7 +85,7 @@ class Card: Object {
             return "N/A"
         }
         
-        let textRange = modifiedURL.index(modifiedURL.startIndex, offsetBy: 7)..<modifiedURL.endIndex
+        let textRange = modifiedURL.index(modifiedURL.startIndex, offsetBy: 7)..<modifiedURL.endIndex //range for "http://"
         
         return modifiedURL.substring(with: textRange)
     }

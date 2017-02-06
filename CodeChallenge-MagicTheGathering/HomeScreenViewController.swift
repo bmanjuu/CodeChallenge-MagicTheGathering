@@ -12,6 +12,10 @@ class HomeScreenViewController: UIViewController {
 
     @IBOutlet weak var homeScreenImage: UIImageView!
     
+    @IBAction func enterButton(_ sender: Any) {
+        //check to see if all images have been downloaded yet
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

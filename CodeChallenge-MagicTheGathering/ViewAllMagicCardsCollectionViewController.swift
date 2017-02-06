@@ -13,9 +13,14 @@ private let reuseIdentifier = "card"
 //will need to access cards stored in Realm 
 
 class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
+    
+    var cards: Results<Card>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let realm = try! Realm()
+        cards = realm.objects(Card)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,17 +49,20 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 10
+        return cards.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let magicCard = cards[indexPath.row]
+        // let magicCardImage = Card.downloadCardImage(from: magicCard.imageURL)
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
         // Configure the cell

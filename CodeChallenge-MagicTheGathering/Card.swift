@@ -65,6 +65,18 @@ class Card: Object {
         
         return cardImage
     }
+    
+    static func removeOptionalTextFrom(cardValue: String) -> String {
+        
+        if cardValue == "nil" {
+            return "N/A" // or return empty string? 
+        }
+        
+        //range to extract text from within "optional()" parentheses
+        let textRange = cardValue.index(cardValue.startIndex, offsetBy: 9)..<cardValue.index(before: cardValue.endIndex)
+        
+        return cardValue.substring(with: textRange)
+    }
 }
 
 

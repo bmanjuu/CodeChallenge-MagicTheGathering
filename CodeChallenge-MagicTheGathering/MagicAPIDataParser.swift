@@ -35,13 +35,23 @@ class MagicAPIDataParser {
                     let imageURL = "\(card["imageUrl"])" as? String else {
                         print(MagicDataParseError.InvalidJSONDictionaryCast); return [Card]()}
                 
-                let cardImage = Cards.downloadCardImage(from: imageURL)
+                let cardImage = Card.downloadCardImage(from: imageURL)
                 
-                let newCard = Cards(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL, image: cardImage)
+                let newCard = Card()
+                newCard.name = name
+                newCard.manaCost = manaCost
+                newCard.type = type
+                newCard.rarity = rarity
+                newCard.textDescription = textDescription
+                newCard.power = power
+                newCard.toughness = toughness
+                newCard.imageURL = imageURL
                 
-                if newCard.image != nil {
-                    print("image downloaded for \(newCard.name)")
-                }
+                //let newCard = Cards(name: name, manaCost: manaCost, type: type, rarity: rarity, textDescription: textDescription, power: power, toughness: toughness, imageURL: imageURL, image: cardImage)
+                
+//                if newCard.image != nil {
+//                    print("image downloaded for \(newCard.name)")
+//                }
 
                 print("\n********** CARD INFO **********")
                 print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL)")
@@ -56,7 +66,6 @@ class MagicAPIDataParser {
         
         return allCards
     }
-
     
     static func retrieveCardFromSearchDataParser() {
     }

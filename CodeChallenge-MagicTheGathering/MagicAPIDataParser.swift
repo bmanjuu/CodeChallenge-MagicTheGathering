@@ -36,6 +36,8 @@ class MagicAPIDataParser {
                     let imageURL = "\(card["imageUrl"])" as? String else {
                         print(MagicDataParseError.InvalidJSONDictionaryCast); return [Card]()}
                 
+                let newCardData = Card.saveCardImageDataFrom(urlString: Card.removeOptionalTextFrom(cardValue: imageURL))
+                
                 let newCard = Card(
                     name: Card.removeOptionalTextFrom(cardValue: name),
                     manaCost: Card.removeOptionalTextFrom(cardValue: manaCost),
@@ -45,8 +47,8 @@ class MagicAPIDataParser {
                     power: Card.removeOptionalTextFrom(cardValue: power),
                     toughness: Card.removeOptionalTextFrom(cardValue: toughness),
                     imageURL: Card.removeOptionalTextFrom(cardValue: imageURL),
-                    imageData: Card.saveCardImageDataFrom(urlString: Card.removeOptionalTextFrom(cardValue: imageURL))
-                )
+                    imageData: newCardData)
+                    
 
                 print("\n********** CARD INFO **********")
                 print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL) \nimageData: \(newCard.imageData)")

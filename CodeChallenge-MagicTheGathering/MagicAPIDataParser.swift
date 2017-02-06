@@ -44,7 +44,8 @@ class MagicAPIDataParser {
                     textDescription: Card.removeOptionalTextFrom(cardValue: textDescription),
                     power: Card.removeOptionalTextFrom(cardValue: power),
                     toughness: Card.removeOptionalTextFrom(cardValue: toughness),
-                    imageURL: Card.removeOptionalTextFrom(cardValue: imageURL))
+                    imageURL: Card.removeHTTPFromURL(url: imageURL)
+                )
 
                 print("\n********** CARD INFO **********")
                 print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL)")

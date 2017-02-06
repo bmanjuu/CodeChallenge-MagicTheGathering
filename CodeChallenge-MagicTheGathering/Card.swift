@@ -62,7 +62,7 @@ class Card: Object {
             guard let data = data, error == nil else { return }
             cardImage = UIImage(data: data)!
         }
-        
+
         return cardImage
     }
     
@@ -76,6 +76,18 @@ class Card: Object {
         let textRange = cardValue.index(cardValue.startIndex, offsetBy: 9)..<cardValue.index(before: cardValue.endIndex)
         
         return cardValue.substring(with: textRange)
+    }
+    
+    static func removeHTTPFromURL(url: String) -> String {
+        var modifiedURL = removeOptionalTextFrom(cardValue: url)
+        
+        if modifiedURL == "N/A" {
+            return "N/A"
+        }
+        
+        let textRange = modifiedURL.index(modifiedURL.startIndex, offsetBy: 7)..<modifiedURL.endIndex
+        
+        return modifiedURL.substring(with: textRange)
     }
 }
 

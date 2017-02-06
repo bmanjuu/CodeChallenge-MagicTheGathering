@@ -92,9 +92,6 @@ class Card: Object {
 }
 
 
-//idea for displaying card
-//user clicks on card, it expands to fit the screen, tap again and the card flips over to the back with an overlay that contains textual description of what's on the card
-
 //the following does not work b/c the strings being parsed/saved from JSON are optional
 
 //override class func primaryKey() -> String? {

@@ -10,11 +10,20 @@ import UIKit
 import RealmSwift
 
 private let reuseIdentifier = "card"
-//will need to access cards stored in Realm 
+fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+fileprivate let itemsPerRow: CGFloat = 2
 
 class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     
-    var cards: Results<Card>!
+    var cards: Results<Card>! //accessing card information stored in Realm
+    
+    //PLAN:
+    //modify section inset size
+    //when user reaches the bottom there should be a button to load more cards
+    //when user clicks on card, it expands to fit the screen, tap again and the card flips over to the back with an overlay that contains textual description of what's on the card
+    //may need to create a custom collection view cell to display card
+    //add a search bar on top that filters cards based on name 
+    //extra: search using other filters such as mana cost, rarity, and type
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +76,7 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
+        cell.backgroundColor = UIColor.cyan
         cell.contentView.sizeToFit()
     
         return cell
@@ -104,3 +114,29 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     */
 
 }
+
+extension ViewAllMagicCardsCollectionViewController : UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+}
+

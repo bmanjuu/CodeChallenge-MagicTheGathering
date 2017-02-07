@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CodeChallenge-MagicTheGathering.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>193340AB4112B56BF64C468C2AABF368</key>
+		<key>1D6606F4284D42C7725A4C5359C2C8FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D3ED1BEFECA971794F0CD990E4EE5017</key>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5E7EC641E93F822204B3A05F445EC06</key>
+		<key>615F4C1CF58FEF88F86D8454589042FD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D41E5400053032174116A448B8481DFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

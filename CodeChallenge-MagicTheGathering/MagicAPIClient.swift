@@ -22,7 +22,7 @@ class MagicAPIClient {
         let session = URLSession(configuration: .default)
         
         pageNumber+=1
-        let getCardsBaseURL = URL(string: "https://api.magicthegathering.io/v1/cards?page=\(pageNumber)")
+        let getCardsBaseURL = URL(string: "https://api.magicthegathering.io/v1/cards?page=\(pageNumber)&pageSize=50")
         print("PAGE NUMBER: \(pageNumber)")
         
         let dataTask = session.dataTask(with: getCardsBaseURL!, completionHandler: { (data, response, error) in

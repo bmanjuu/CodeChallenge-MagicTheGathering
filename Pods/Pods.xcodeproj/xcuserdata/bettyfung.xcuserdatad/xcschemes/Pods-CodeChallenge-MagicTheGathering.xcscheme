@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D5E7EC641E93F822204B3A05F445EC06"
+               BlueprintIdentifier = "1D6606F4284D42C7725A4C5359C2C8FD"
                BuildableName = "Pods_CodeChallenge_MagicTheGathering.framework"
                BlueprintName = "Pods-CodeChallenge-MagicTheGathering"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D5E7EC641E93F822204B3A05F445EC06"
+            BlueprintIdentifier = "1D6606F4284D42C7725A4C5359C2C8FD"
             BuildableName = "Pods_CodeChallenge_MagicTheGathering.framework"
             BlueprintName = "Pods-CodeChallenge-MagicTheGathering"
             ReferencedContainer = "container:Pods.xcodeproj">

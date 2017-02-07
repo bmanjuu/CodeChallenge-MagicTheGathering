@@ -7,6 +7,7 @@ target 'CodeChallenge-MagicTheGathering' do
 
   # Pods for CodeChallenge-MagicTheGathering
   pod 'RealmSwift'
+  pod 'NVActivityIndicatorView'
 
 end
 

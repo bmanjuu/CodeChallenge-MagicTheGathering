@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        print("Hello World - testing after creating magic API client & data parser")
-        let testCards = [Card]()
-        MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
-            print("called api client first time")
-        }
+//        print("Hello World - testing after creating magic API client & data parser")
+//        let testCards = [Card]()
+//        MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
+//            print("called api client first time")
+//        }
 
 //        MagicAPIClient.retrieveAllCardsRequest { (testCards, nil) in
 //            print("called api client second time")

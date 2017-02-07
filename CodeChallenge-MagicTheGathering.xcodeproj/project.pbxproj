@@ -19,6 +19,7 @@
 		A4161D7F1E47E520007A5B1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4161D7E1E47E520007A5B1E /* Main.storyboard */; };
 		A4161D811E47EA74007A5B1E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4161D801E47EA74007A5B1E /* Card.swift */; };
 		A418ED041E48F6AF00E54291 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418ED031E48F6AF00E54291 /* CardCollectionViewCell.swift */; };
+		A42D5B3B1E4A59C200464EAA /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D5B3A1E4A59C200464EAA /* CardDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A4161D7E1E47E520007A5B1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		A4161D801E47EA74007A5B1E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A418ED031E48F6AF00E54291 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		A42D5B3A1E4A59C200464EAA /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
 		B590F9B0525A870B9088EBEA /* Pods-CodeChallenge-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				A418ED031E48F6AF00E54291 /* CardCollectionViewCell.swift */,
 				A4050DD11E427ED50049A54B /* HomeScreenViewController.swift */,
 				A4050DE41E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift */,
+				A42D5B3A1E4A59C200464EAA /* CardDetailViewController.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */,
 				A4050DE51E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift in Sources */,
 				A4050DD21E427ED50049A54B /* HomeScreenViewController.swift in Sources */,
+				A42D5B3B1E4A59C200464EAA /* CardDetailViewController.swift in Sources */,
 				A4050DD01E427ED50049A54B /* AppDelegate.swift in Sources */,
 				A4050DD81E427ED50049A54B /* CodeChallenge_MagicTheGathering.xcdatamodeld in Sources */,
 				A4161D7D1E477704007A5B1E /* MagicAPIDataParser.swift in Sources */,

@@ -21,10 +21,11 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     //PLAN:
     //modify section inset size
     //when user reaches the bottom there should be a button to load more cards
-    //when user clicks on card, it expands to fit the screen, tap again and the card flips over to the back with an overlay that contains textual description of what's on the card
+    //
     //add a search bar on top that filters cards based on name 
     //extra: search using other filters such as mana cost, rarity, and type
-
+    //extra: when user clicks on card, it expands to fit the screen, tap again and the card flips over to the back with an overlay that contains textual description of what's on the card
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,6 +74,12 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
         cell.cardImageView.image = magicCardImage
     
         return cell
+    }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        MagicAPIClient.retrieveAllCardsRequest { (cards, nil) in
+            print("calling a second time")
+        }
     }
 
     // MARK: UICollectionViewDelegate

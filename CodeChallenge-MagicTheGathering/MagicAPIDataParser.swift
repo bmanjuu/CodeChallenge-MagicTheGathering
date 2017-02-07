@@ -58,6 +58,8 @@ class MagicAPIDataParser {
         }
         
         try! realm.write {
+            //should check if cards already exist within realm first! 
+            //may not need "allCards" array if checking cards/persisting to realm individually 
             realm.add(allCards)
         }
         

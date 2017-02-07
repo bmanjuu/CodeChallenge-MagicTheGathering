@@ -21,7 +21,8 @@ class MagicAPIClient {
         
         let session = URLSession(configuration: .default)
         
-        pageNumber+=1
+        pageNumber+=1 //cards start repeating themselves in the middle of page 10 
+        
         let getCardsBaseURL = URL(string: "https://api.magicthegathering.io/v1/cards?page=\(pageNumber)&pageSize=50")
         print("PAGE NUMBER: \(pageNumber)")
         

@@ -52,20 +52,28 @@ class MagicAPIDataParser {
                     imageData: newCardData)
                     
 
-                print("\n********** CARD INFO **********")
-                print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL) \nimageData: \(newCard.imageData)")
-                print("*******************************\n")
+//                print("\n********** CARD INFO **********")
+//                print("name: \(newCard.name) \nmana cost: \(newCard.manaCost) \ntype: \(newCard.type) \nrarity: \(newCard.rarity) \ntextDescription: \(newCard.textDescription) \npower: \(newCard.power) \ntoughness: \(newCard.toughness) \nimageURL: \(newCard.imageURL) \nimageData: \(newCard.imageData)")
+//                print("*******************************\n")
+                print("new card: \(newCard.name)")
                 
                 if !cards.contains(newCard) {
                     try! realm.write {
                         //should check if cards already exist within realm first!
                         //may not need "allCards" array if checking cards/persisting to realm individually
+                        // print("adding \(newCard.name) to realm")
                         realm.add(newCard)
                     }
                     allCards.append(newCard)
                 }
             }
         }
+//        print("\n\n\nafter adding new cards")
+//        print("card count: \(cards.count)")
+//        for card in cards {
+//            print(card.name)
+//        }
+        
         
         return allCards
     }

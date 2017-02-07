@@ -19,7 +19,7 @@ class HomeScreenViewController: UIViewController {
     
     @IBAction func enterButton(_ sender: Any) {
         //check to see if all images have been downloaded yet
-        print("card count: \(cards.count)")
+        // print("card count: \(cards.count)")
         //else, activity indicator
 //        OperationQueue.main.addOperation {
 //            let loadingActivityIndicatorView = NVActivityIndicatorView(frame: self.view.frame, type: .ballBeat, color: UIColor.black, padding: 0.0)
@@ -39,12 +39,16 @@ class HomeScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        cards = realm.objects(Card)
         
         MagicAPIClient.retrieveAllCardsRequest { (cards, nil) in
             print("called api client first time")
+            print("from home screen, card count: \(cards.count)")
+            
+            for card in cards {
+                print(card.name)
+            }
         }
-        
-        cards = realm.objects(Card)
 
     }
 

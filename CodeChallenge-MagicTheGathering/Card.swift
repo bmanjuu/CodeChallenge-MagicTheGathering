@@ -62,15 +62,15 @@ class Card: Object {
         
         downloadDataFromImageURL(url: url) { (data, response, error) in
             guard let data = data, error == nil else { return }
-            print("data for image: \(data)")
+            // print("data for image: \(data)")
             cardImageData = data
         }
         
         while cardImageData.isEmpty {
-            print("downloading image data")
+            // print("downloading image data")
         }
         
-        print("image size downloaded: \(cardImageData)")
+        // print("image size downloaded: \(cardImageData)")
 
         return cardImageData
     }

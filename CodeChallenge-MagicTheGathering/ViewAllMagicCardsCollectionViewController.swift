@@ -78,7 +78,12 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         MagicAPIClient.retrieveAllCardsRequest { (cards, nil) in
-            print("calling a second time")
+            print("called API for \(MagicAPIClient.pageNumber) time")
+            print("there are currently \(cards.count) cards saved in realm")
+        }
+        
+        DispatchQueue.main.async {
+            self.collectionView!.reloadData()
         }
     }
 

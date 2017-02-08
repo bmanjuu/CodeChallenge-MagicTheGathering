@@ -14,10 +14,12 @@ class MagicAPIDataParser {
     
     enum MagicDataParseError: Error { case InvalidJSONDictionaryCast, InvalidDictionaryResponse }
     
+    static var cards: Results<Card>!
+    
     static func retrieveAllCardsDataParser(from cardInformation: [String:[NSDictionary]]) -> [Card] {
         
-        let realm = try! Realm()
-        var cards: Results<Card>! = realm.objects(Card)
+//        let realm = try! Realm()
+//        var cards: Results<Card>! = realm.objects(Card)
         
         var allCards = [Card]()
         
@@ -57,14 +59,18 @@ class MagicAPIDataParser {
 //                print("*******************************\n")
                 print("new card: \(newCard.name)")
                 
-                if !cards.contains(newCard) {
-                    try! realm.write {
-                        //should check if cards already exist within realm first!
-                        //may not need "allCards" array if checking cards/persisting to realm individually
-                        // print("adding \(newCard.name) to realm")
-                        realm.add(newCard)
+                if let realm = try? Realm() {
+                    cards = realm.objects(Card.self)
+                    
+                    if !cards.contains(newCard) {
+                        try! realm.write {
+                            //should check if cards already exist within realm first!
+                            //may not need "allCards" array if checking cards/persisting to realm individually
+                            // print("adding \(newCard.name) to realm")
+                            realm.add(newCard)
+                        }
+                        allCards.append(newCard)
                     }
-                    allCards.append(newCard)
                 }
             }
         }
@@ -73,6 +79,7 @@ class MagicAPIDataParser {
 //        for card in cards {
 //            print(card.name)
 //        }
+//        print("------ END API ------")
         
         
         return allCards

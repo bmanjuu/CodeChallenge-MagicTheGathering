@@ -7,11 +7,33 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CardDetailViewController: UIViewController {
 
+    @IBOutlet weak var cardImage: UIImageView!
+    @IBOutlet weak var cardNameLabel: UILabel!
+    @IBOutlet weak var manaCostLabel: UILabel!
+    
+    static var selectedCard: Card?
+    var cards: Results<Card>!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print("selectedCard: \(CardDetailViewController.selectedCard!.name)")
+        
+        if let realm = try? Realm() {
+            cards = realm.objects(Card.self)
+        }
+        
+        print("\n\ncards currently in realm from detail view")
+        print(cards.count)
+        for card in cards {
+            print(card.name)
+        }
+        print("------ DETAIL END ------")
 
         // Do any additional setup after loading the view.
     }

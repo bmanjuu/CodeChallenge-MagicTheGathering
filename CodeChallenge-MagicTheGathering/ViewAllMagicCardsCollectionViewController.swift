@@ -16,12 +16,13 @@ fileprivate let itemsPerRow: CGFloat = 2
 
 class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     
-    var cards: Results<Card>! //accessing card information stored in Realm
+    //accessing card information stored in Realm
+    var cards: Results<Card>!
     
     //PLAN:
     //modify section inset size
     //when user reaches the bottom there should be a button to load more cards
-    //
+    
     //add a search bar on top that filters cards based on name 
     //extra: search using other filters such as mana cost, rarity, and type
     //extra: when user clicks on card, it expands to fit the screen, tap again and the card flips over to the back with an overlay that contains textual description of what's on the card
@@ -29,8 +30,19 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let realm = try! Realm()
-        cards = realm.objects(Card)
+//        let realm = try! Realm()
+//        cards = realm.objects(Card)
+        if let realm = try? Realm() {
+            cards = realm.objects(Card.self)
+            
+            print("from view did load of collection view, before adding new cards")
+            print("card count: \(cards.count)")
+            print("cards include")
+            for card in cards {
+                print(card.name)
+            }
+            print("------ END COLLECTION VIEWDID LOAD ------")
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -78,20 +90,33 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         MagicAPIClient.retrieveAllCardsRequest { (cards, nil) in
-            print("called API for \(MagicAPIClient.pageNumber) time")
-            print("from collection view, after adding new cards")
-            print("card count: \(cards.count)")
-            for card in cards {
-                print(card.name)
-            }
-            print("--------------------------------------------")
+//            print("CLOSURE STUFF")
+//            print("called API for \(MagicAPIClient.pageNumber) time")
+//            print("from collection view, after adding new cards")
+//            print("card count: \(cards.count)")
+//            for card in cards {
+//                print(card.name)
+//            }
+//            print("------------- CLOSURE --------------------")
         }
         
         DispatchQueue.main.async {
             self.collectionView?.reloadData()
         }
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        CardDetailViewController.selectedCard = cards[indexPath.row]
+        print("presenting details for \(self.cards[indexPath.row])")
+        
+    }
 
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationVC = segue.destination as? CardDetailViewController
+//        // let selectedCard = cards.
+//    }
     // MARK: UICollectionViewDelegate
 
     /*

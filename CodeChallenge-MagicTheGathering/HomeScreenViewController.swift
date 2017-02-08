@@ -44,10 +44,11 @@ class HomeScreenViewController: UIViewController {
         MagicAPIClient.retrieveAllCardsRequest { (cards, nil) in
             print("called api client first time")
             print("from home screen, card count: \(cards.count)")
-            
+            print("cards include")
             for card in cards {
                 print(card.name)
             }
+            print("------ end home cards ------\n\n")
         }
 
     }

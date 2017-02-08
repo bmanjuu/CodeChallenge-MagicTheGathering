@@ -29,9 +29,7 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let realm = try! Realm()
-//        cards = realm.objects(Card)
+
         if let realm = try? Realm() {
             cards = realm.objects(Card.self)
             
@@ -113,10 +111,7 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     }
 
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationVC = segue.destination as? CardDetailViewController
-//        // let selectedCard = cards.
-//    }
+
     // MARK: UICollectionViewDelegate
 
     /*

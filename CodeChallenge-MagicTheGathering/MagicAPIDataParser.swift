@@ -18,9 +18,6 @@ class MagicAPIDataParser {
     
     static func retrieveAllCardsDataParser(from cardInformation: [String:[NSDictionary]]) -> [Card] {
         
-//        let realm = try! Realm()
-//        var cards: Results<Card>! = realm.objects(Card)
-        
         var allCards = [Card]()
         
         if let allCardInfo = cardInformation["cards"] {
@@ -65,7 +62,6 @@ class MagicAPIDataParser {
                     if !cards.contains(newCard) {
                         try! realm.write {
                             //should check if cards already exist within realm first!
-                            //may not need "allCards" array if checking cards/persisting to realm individually
                             // print("adding \(newCard.name) to realm")
                             realm.add(newCard)
                         }

@@ -58,6 +58,7 @@ class MagicAPIDataParser {
                 
                 if let realm = try? Realm() {
                     cards = realm.objects(Card.self)
+                    // let cardNames =
                     
                     if !cards.contains(newCard) {
                         try! realm.write {

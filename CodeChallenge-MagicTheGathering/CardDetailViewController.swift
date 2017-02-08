@@ -17,6 +17,7 @@ class CardDetailViewController: UIViewController {
     
     static var selectedCard: Card?
     var cards: Results<Card>!
+    // not sure if we need reference to Realm in this VC 
     
     
     override func viewDidLoad() {
@@ -37,7 +38,13 @@ class CardDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.cardImage.image = Card.obtainCardImageFrom(cardData: CardDetailViewController.selectedCard!.imageData)
+        self.cardNameLabel.text = CardDetailViewController.selectedCard?.name
+        self.manaCostLabel.text = CardDetailViewController.selectedCard?.manaCost
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

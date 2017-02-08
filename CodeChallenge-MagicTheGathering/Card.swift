@@ -49,6 +49,10 @@ class Card: Object {
         self.imageData = imageData
     }
     
+    override class func indexedProperties() -> [String] {
+        return ["name", "rarity", "type", "manaCost"]
+    }
+    
     static func downloadDataFromImageURL(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
         URLSession.shared.dataTask(with: url) {
             (data, response, error) in
@@ -94,12 +98,10 @@ class Card: Object {
 }
 
 
-//need to remove duplicate card values before adding them to realm, or else adding the following will result in an RLMException error (duplicate for card named: Forest) 
+//need to remove duplicate card values before adding them to realm, or else adding the following will result in an RLMException error (duplicate for card named: Forest, they are exactly the same except the images are different) 
 
 //override class func primaryKey() -> String? {
 //    return "name"
 //}
 //
-//override class func indexedProperties() -> [String] {
-//    return ["rarity", "type", "manaCost"]
-//}
+

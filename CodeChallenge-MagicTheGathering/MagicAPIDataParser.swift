@@ -58,12 +58,9 @@ class MagicAPIDataParser {
                 
                 if let realm = try? Realm() {
                     cards = realm.objects(Card.self)
-                    // let cardNames =
                     
                     if !cards.contains(newCard) {
                         try! realm.write {
-                            //should check if cards already exist within realm first!
-                            // print("adding \(newCard.name) to realm")
                             realm.add(newCard)
                         }
                         allCards.append(newCard)

@@ -11,7 +11,7 @@ import Foundation
 import RealmSwift
 
 private let reuseIdentifier = "card"
-fileprivate let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+fileprivate let sectionInsets = UIEdgeInsets(top: 15.0, left: 15.0, bottom: 15.0, right: 15.0)
 fileprivate let itemsPerRow: CGFloat = 2
 
 class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
@@ -20,9 +20,6 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     var cards: Results<Card>!
     
     //PLAN:
-    //modify section inset size
-    //when user reaches the bottom there should be a button to load more cards
-    
     //add a search bar on top that filters cards based on name 
     //extra: search using other filters such as mana cost, rarity, and type
     //extra: when user clicks on card, it expands to fit the screen, tap again and the card flips over to the back with an overlay that contains textual description of what's on the card

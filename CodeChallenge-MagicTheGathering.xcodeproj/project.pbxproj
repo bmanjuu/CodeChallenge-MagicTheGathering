@@ -16,10 +16,10 @@
 		A4050DE51E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE41E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift */; };
 		A4050DE71E4293A30049A54B /* MagicAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4050DE61E4293A30049A54B /* MagicAPIClient.swift */; };
 		A4161D7D1E477704007A5B1E /* MagicAPIDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */; };
-		A4161D7F1E47E520007A5B1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4161D7E1E47E520007A5B1E /* Main.storyboard */; };
 		A4161D811E47EA74007A5B1E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4161D801E47EA74007A5B1E /* Card.swift */; };
 		A418ED041E48F6AF00E54291 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A418ED031E48F6AF00E54291 /* CardCollectionViewCell.swift */; };
 		A42D5B3B1E4A59C200464EAA /* CardDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42D5B3A1E4A59C200464EAA /* CardDetailViewController.swift */; };
+		A4E146C71E4D359C0047AA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4E146C61E4D359C0047AA6B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +35,10 @@
 		A4050DE41E4290C40049A54B /* ViewAllMagicCardsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAllMagicCardsCollectionViewController.swift; sourceTree = "<group>"; };
 		A4050DE61E4293A30049A54B /* MagicAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicAPIClient.swift; sourceTree = "<group>"; };
 		A4161D7C1E477704007A5B1E /* MagicAPIDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagicAPIDataParser.swift; sourceTree = "<group>"; };
-		A4161D7E1E47E520007A5B1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		A4161D801E47EA74007A5B1E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A418ED031E48F6AF00E54291 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A42D5B3A1E4A59C200464EAA /* CardDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailViewController.swift; sourceTree = "<group>"; };
+		A4E146C61E4D359C0047AA6B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B590F9B0525A870B9088EBEA /* Pods-CodeChallenge-MagicTheGathering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CodeChallenge-MagicTheGathering/Pods-CodeChallenge-MagicTheGathering.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,7 +108,7 @@
 		A418ED071E48F7E100E54291 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A4161D7E1E47E520007A5B1E /* Main.storyboard */,
+				A4E146C61E4D359C0047AA6B /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -203,7 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4161D7F1E47E520007A5B1E /* Main.storyboard in Resources */,
+				A4E146C71E4D359C0047AA6B /* Main.storyboard in Resources */,
 				A4050DDD1E427ED50049A54B /* LaunchScreen.storyboard in Resources */,
 				A4050DDA1E427ED50049A54B /* Assets.xcassets in Resources */,
 			);

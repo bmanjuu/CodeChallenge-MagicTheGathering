@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Ll-Jl-vE2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen View Controller-->
+        <scene sceneID="djN-Wu-BPh">
+            <objects>
+                <viewController id="MDU-II-41K" customClass="HomeScreenViewController" customModule="CodeChallenge_MagicTheGathering" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GxG-tw-AKM"/>
+                        <viewControllerLayoutGuide type="bottom" id="PF1-iV-bEf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="agc-ay-8GE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="magiclogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ebb-Ia-WYF">
+                                <rect key="frame" x="37" y="185" width="300" height="168"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdK-aD-RCH">
+                                <rect key="frame" x="146" y="374" width="83" height="30"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <segue destination="Ti6-d9-1SB" kind="show" id="Jc5-ma-G4Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ebb-Ia-WYF" firstAttribute="top" secondItem="GxG-tw-AKM" secondAttribute="bottom" constant="121" id="SdD-Af-ezY"/>
+                            <constraint firstItem="Ebb-Ia-WYF" firstAttribute="centerX" secondItem="agc-ay-8GE" secondAttribute="centerX" id="Sqm-93-N14"/>
+                            <constraint firstItem="PF1-iV-bEf" firstAttribute="top" secondItem="CdK-aD-RCH" secondAttribute="bottom" constant="263" id="jA4-pw-oAF"/>
+                            <constraint firstItem="CdK-aD-RCH" firstAttribute="centerX" secondItem="agc-ay-8GE" secondAttribute="centerX" id="ywl-01-5tg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LpW-Nj-BEa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sc8-JC-hAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87.200000000000003" y="-227.13643178410797"/>
+        </scene>
+        <!--View All Magic Cards Collection View Controller-->
+        <scene sceneID="YEJ-ec-Qh3">
+            <objects>
+                <collectionViewController id="Ti6-d9-1SB" customClass="ViewAllMagicCardsCollectionViewController" customModule="CodeChallenge_MagicTheGathering" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CsP-Wx-iNV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UXk-2V-psZ">
+                            <size key="itemSize" width="200" height="280"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="JNg-3R-6Zy" customClass="CardCollectionViewCell" customModule="CodeChallenge_MagicTheGathering" customModuleProvider="target">
+                                <rect key="frame" x="88" y="0.0" width="200" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ywR-Ks-ff1">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ywR-Ks-ff1" secondAttribute="bottom" id="17N-Uv-Hzo"/>
+                                    <constraint firstAttribute="trailing" secondItem="ywR-Ks-ff1" secondAttribute="trailing" id="RKJ-QP-fgX"/>
+                                    <constraint firstItem="ywR-Ks-ff1" firstAttribute="top" secondItem="JNg-3R-6Zy" secondAttribute="top" id="Zhe-fy-8h0"/>
+                                    <constraint firstItem="ywR-Ks-ff1" firstAttribute="leading" secondItem="JNg-3R-6Zy" secondAttribute="leading" id="fNS-Dc-i5C"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cardImageView" destination="ywR-Ks-ff1" id="ipH-69-332"/>
+                                    <segue destination="vYf-3H-Sq1" kind="show" id="iqZ-CO-m8B"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Ti6-d9-1SB" id="kPa-rU-4Ov"/>
+                            <outlet property="delegate" destination="Ti6-d9-1SB" id="O67-rk-Jar"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9Q-D2-YnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="-228.03598200899552"/>
+        </scene>
+        <!--Card Detail View Controller-->
+        <scene sceneID="xuK-c3-V26">
+            <objects>
+                <viewController id="vYf-3H-Sq1" customClass="CardDetailViewController" customModule="CodeChallenge_MagicTheGathering" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n0l-T2-CdT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dt2-7q-lTP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hfa-l8-EaV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BbP-5d-hg7">
+                                <rect key="frame" x="53" y="99" width="268" height="346"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9f-Bc-0cP">
+                                <rect key="frame" x="53" y="488" width="268" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQo-81-u31">
+                                <rect key="frame" x="53" y="532" width="268" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BbP-5d-hg7" firstAttribute="centerX" secondItem="hfa-l8-EaV" secondAttribute="centerX" id="Lzs-cj-6St"/>
+                            <constraint firstItem="Dt2-7q-lTP" firstAttribute="top" secondItem="BbP-5d-hg7" secondAttribute="bottom" constant="222" id="UyZ-nN-8GR"/>
+                            <constraint firstItem="BbP-5d-hg7" firstAttribute="top" secondItem="n0l-T2-CdT" secondAttribute="bottom" constant="35" id="cYv-GT-ZeA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BbP-5d-hg7" secondAttribute="trailing" constant="38" id="yJp-KD-igp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImage" destination="BbP-5d-hg7" id="ge5-BV-EgQ"/>
+                        <outlet property="cardNameLabel" destination="f9f-Bc-0cP" id="YOB-ZH-dt8"/>
+                        <outlet property="manaCostLabel" destination="iQo-81-u31" id="dOr-Vk-XKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tob-ZY-G0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533.5999999999999" y="-228.03598200899552"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jcI-Bk-WV9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ll-Jl-vE2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PeB-Yj-Dcj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MDU-II-41K" kind="relationship" relationship="rootViewController" id="NWh-XN-8pr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8OE-zK-JEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-852" y="-227.13643178410797"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magiclogo" width="396" height="96"/>
+    </resources>
+</document>

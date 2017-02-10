@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29520598869999998" green="0.29520598869999998" blue="0.29520598869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ebb-Ia-WYF" firstAttribute="top" secondItem="GxG-tw-AKM" secondAttribute="bottom" constant="121" id="SdD-Af-ezY"/>
                             <constraint firstItem="Ebb-Ia-WYF" firstAttribute="centerX" secondItem="agc-ay-8GE" secondAttribute="centerX" id="Sqm-93-N14"/>
@@ -51,10 +51,10 @@
         <scene sceneID="YEJ-ec-Qh3">
             <objects>
                 <collectionViewController id="Ti6-d9-1SB" customClass="ViewAllMagicCardsCollectionViewController" customModule="CodeChallenge_MagicTheGathering" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CsP-Wx-iNV">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="CsP-Wx-iNV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29520598869999998" green="0.29520598869999998" blue="0.29520598869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UXk-2V-psZ">
                             <size key="itemSize" width="200" height="280"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -63,7 +63,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="JNg-3R-6Zy" customClass="CardCollectionViewCell" customModule="CodeChallenge_MagicTheGathering" customModuleProvider="target">
-                                <rect key="frame" x="87.5" y="0.0" width="200" height="280"/>
+                                <rect key="frame" x="88" y="0.0" width="200" height="280"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
@@ -124,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.29520598869999998" green="0.29520598869999998" blue="0.29520598869999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="iQo-81-u31" firstAttribute="centerX" secondItem="f9f-Bc-0cP" secondAttribute="centerX" id="AtE-cs-I90"/>
                             <constraint firstItem="iQo-81-u31" firstAttribute="top" secondItem="f9f-Bc-0cP" secondAttribute="bottom" constant="23" id="F73-xe-V1n"/>

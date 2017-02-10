@@ -73,12 +73,13 @@ class ViewAllMagicCardsCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CardCollectionViewCell
-        cell.backgroundColor = UIColor.cyan
+        cell.backgroundColor = UIColor.clear
         
         let magicCard = cards[indexPath.row]
         let magicCardImage = Card.obtainCardImageFrom(cardData: magicCard.imageData)
 
         cell.cardImageView.image = magicCardImage
+        cell.cardImageView.backgroundColor = UIColor.clear
     
         return cell
     }
